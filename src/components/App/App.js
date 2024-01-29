@@ -1,13 +1,10 @@
-import "./App.css";
-import Test from "../Test/Test";
+import './App.css';
+import SearchPage from '../../pages/SearchPage/SearchPage.js';
 
 function App() {
   return (
     <div className="app">
-      <h1 className="app__title">hello</h1>
-      <div className="app__picturesList"></div>
-      <button className="app__addButton"></button>
-      <Test />
+      <SearchPage />
     </div>
   );
 }
