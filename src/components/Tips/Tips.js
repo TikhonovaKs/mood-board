@@ -1,15 +1,22 @@
 import React from 'react';
 import './Tips.css';
+import TIPS from '../../utils/TIPS.js';
 
 function Tips() {
+  const listOfTips = TIPS;
+
+  function getRandomWords(array, count) {
+    const shuffledArray = array.sort(() => Math.random() - 0.5);
+    return shuffledArray.slice(0, count);
+  }
+
+  const randomWords = getRandomWords(listOfTips, 6);
+
   return (
     <div className="tips">
-      <button className="tips__element">Nature</button>
-      <button className="tips__element">Cat</button>
-      <button className="tips__element tips__element_black">Love</button>
-      <button className="tips__element">Cosiness</button>
-      <button className="tips__element">Pleasure</button>
-      <button className="tips__element">Cow</button>
+      {randomWords.map((item) => (
+          <button className='tips__element'>{item}</button>
+      ))}
     </div>
   );
 }
