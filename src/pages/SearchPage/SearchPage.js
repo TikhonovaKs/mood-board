@@ -3,6 +3,7 @@ import photoApi from '../../utils/PhotoApi.js';
 import './SearchPage.css';
 import Search from '../../components/Search/Search.js';
 import Tips from '../../components/Tips/Tips.js';
+import CardList from '../../components/CardList/CardList.js';
 // import PhotoPopup from '../../components/PhotoPopup/PhotoPopup.js';
 
 function SearchPage() {
@@ -31,12 +32,13 @@ function SearchPage() {
   const handleSearch = (data) => {
     setKeyword(data);
   }
-
+  
   return (
     <div className="searchPage">
       <Search handleSearch={handleSearch} />
       <Tips />
-      {/* <PhotoPopup searchList={searchList} /> */}
+      <CardList searchList={searchList} />
+      {/* <PhotoPopup /> */}
     </div>
   );
 }

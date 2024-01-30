@@ -1,8 +1,8 @@
-import "./Header.css";
-import { Link } from "react-router-dom";
-import { ReactComponent as LogoIcon } from "../../Icons/logo-dark.svg";
-import { ReactComponent as FindIcon } from "../../Icons/find-rectangle-dark.svg";
-import { ReactComponent as AccountIcon } from "../../Icons/profile-dark.svg";
+import './Header.css';
+import { Link } from 'react-router-dom';
+import { ReactComponent as LogoIcon } from '../../Icons/logo-dark.svg';
+import { ReactComponent as FindIcon } from '../../Icons/find-rectangle-dark.svg';
+import { ReactComponent as AccountIcon } from '../../Icons/profile-dark.svg';
 
 export default function Header() {
   return (
