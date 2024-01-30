@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SearchPage from "../../pages/SearchPage/SearchPage.js";
 import BoardPage from "../../pages/BoardPage/BoardPage.js";
 import Root from "../../pages/RootPage/Root.js";
-import Header from '../Header/Header.js';
 
 function App() {
   return (
