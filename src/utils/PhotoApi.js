@@ -12,7 +12,7 @@ class PhotoApi {
   }
 
   searchPhoto(keyword) {
-    return fetch(`${this._url}search?query=${keyword}&per_page=100`, {
+    return fetch(`${this._url}search?query=${keyword}&per_page=80`, {
       method: 'GET',
       headers: this._headers,
     }).then(this._checkResponse);

@@ -3,16 +3,18 @@ import photoApi from '../../utils/PhotoApi.js';
 import './SearchPage.css';
 import Search from '../../components/Search/Search.js';
 import Tips from '../../components/Tips/Tips.js';
-import PhotoPopup from '../../components/PhotoPopup/PhotoPopup.js';
+// import PhotoPopup from '../../components/PhotoPopup/PhotoPopup.js';
 
 function SearchPage() {
   const [searchList, setSearchList] = useState([]);
-  const keyword = 'nature';
+  const [keyword, setKeyword] = useState('');
+  // const keyword = 'nature';
   
   React.useEffect(() => {
     photoApi
       .searchPhoto(keyword)
       .then((data) => {
+        console.log(data)
         const photos = data.photos;
         setSearchList(
             photos.map((item) => ({
@@ -24,13 +26,17 @@ function SearchPage() {
       .catch((err) => {
         console.error(err);
       });
-  }, []);
+  }, [keyword]);
+  
+  const handleSearch = (data) => {
+    setKeyword(data);
+  }
 
   return (
     <div className="searchPage">
-      <Search />
+      <Search handleSearch={handleSearch} />
       <Tips />
-      <PhotoPopup searchList={searchList} />
+      {/* <PhotoPopup searchList={searchList} /> */}
     </div>
   );
 }

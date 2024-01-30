@@ -1,10 +1,57 @@
+import React from 'react';
+import { useForm } from 'react-hook-form';
 import './Search.css';
 
-function Search() {
+function Search({handleSearch}) {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    reset,
+  } = useForm({
+    mode: 'onChange',
+  });
+
+  // Form field change handler:
+  const onSubmit = (data) => {
+    handleSearch(data.keyword)
+    reset();
+  };
+
   return (
-    <form class="search" name="searchform" novalidate>
-      <input type="text" name="keyword" placeholder="Press to search..." class="search__input" required />
-      <button disabled type="submit" class="search__button search__button_disabled" aria-label="Send"></button>
+    <form class="search" onSubmit={handleSubmit(onSubmit)} name="searchform" novalidate>
+      <input
+        type="text"
+        placeholder="Press to search..."
+        class="search__input"
+        {...register('keyword', {
+          required: {
+            value: true,
+            message: 'Please enter a keyword',
+          },
+          minLength: {
+            value: 1,
+            message: 'Minimum length is 1',
+          },
+          maxLength: {
+            value: 20,
+            message: 'Maximum length is 20',
+          },
+          pattern: {
+            value: /^[a-zA-Z\s-]+$/,
+            message: 'Please enter a valid keword',
+          },
+        })}
+      ></input>
+      <div className="search__error">
+      {errors?.keyword && <div className="search__error">{errors.keyword.message}</div>}
+      </div>
+      <button
+        type="submit"
+        class="search__button search__button_disabled"
+        aria-label="Send"
+        disabled={!isValid}
+      ></button>
     </form>
   );
 }
