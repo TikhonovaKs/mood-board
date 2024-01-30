@@ -18,29 +18,27 @@ header {
   height: 2.5rem;
 }
 
+.header__icon path:hover {
+  cursor: pointer;
+}
+
 .header__icon--logo path {
   fill: #ff6838;
-}
-
-.header__icon--logo path:hover {
-  fill: #f54611;
-  cursor: pointer;
-  transition: ease 0.5s;
-}
-
-.header__icon--account path,
-.header__icon--find path {
-  fill: #000000;
-}
-
-.header__icon--account path:hover,
-.header__icon--find path:hover {
-  fill: #000000;
-  cursor: pointer;
-  transition: ease 0.5s;
 }
 
 .header__right {
   display: flex;
   gap: 0.5rem;
+}
+
+.header__icon--account path,
+.header__icon--find path {
+  fill: #3a3a3a;
+}
+
+.header__icon--account path:hover,
+.header__icon--find path:hover {
+  fill: #000000;
+
+  transition: ease 0.5s;
 }
