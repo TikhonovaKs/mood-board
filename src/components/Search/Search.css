@@ -41,6 +41,7 @@
   right: 6px;
   top: 6px;
   background-color: #f9f9f9;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -60,5 +61,5 @@
 
 .search__error {
   display: flex;
-  padding: 6px 20px;
+  padding: 5px 10px;
 }
