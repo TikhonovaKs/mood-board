@@ -4,6 +4,7 @@
   grid-template-columns: 1fr 100px;
   position: relative;
   box-sizing: border-box;
+  margin-top: 30px;
 }
 
 .search__input {
@@ -22,11 +23,11 @@
 
 @media screen and (min-width: 768px) {
   .search__input {
-    font-size: 13px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 17px;
-    padding: 14px 22px;
+    line-height: 21px;
+    padding: 16px 22px;
   }
 }
 
@@ -39,4 +40,25 @@
   position: absolute;
   right: 6px;
   top: 6px;
+  background-color: #f9f9f9;
+}
+
+@media screen and (min-width: 768px) {
+  .search__button {
+    right: 9px;
+    top: 9px;
+    background-color: #f9f9f9;
+  }
+}
+
+.search__error {
+  font-size: 10px;
+  line-height: normal;
+  color: #EE3465;
+  padding-top: 6px;
+}
+
+.search__error {
+  display: flex;
+  padding: 6px 20px;
 }
