@@ -1,11 +1,16 @@
-import React from 'react';
-import './Card.css';
+import React from "react";
+import "./Card.css";
 
-function Card({card}) {
+function Card({ card, onClick }) {
   return (
     <>
       <li>
-        <img className='card' src={card.src} />
+        <img
+          className="card"
+          src={card.src}
+          alt={card.alt}
+          onClick={() => onClick(card)}
+        />
       </li>
     </>
   );
