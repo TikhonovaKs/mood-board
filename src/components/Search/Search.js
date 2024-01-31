@@ -1,21 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useSearch } from '../../providers/SearchProvider/SearchProvider.hook.js';
 import './Search.css';
 
 function Search({handleSearch}) {
+  const { saveKeyWord, keyWord } = useSearch();
+
   const {
     register,
     handleSubmit,
     formState: { errors, isValid },
-    reset,
   } = useForm({
     mode: 'onChange',
   });
 
-  // Form field change handler:
   const onSubmit = (data) => {
-    handleSearch(data.keyword)
-    reset();
+    saveKeyWord(data.keyword);
+    handleSearch(keyWord);
   };
 
   return (
@@ -24,6 +25,7 @@ function Search({handleSearch}) {
         type="text"
         placeholder="Press to search..."
         class="search__input"
+        defaultValue={keyWord}
         {...register('keyword', {
           required: {
             value: true,
