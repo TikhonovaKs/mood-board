@@ -1,11 +1,11 @@
-import React from 'react';
-import './Card.css';
+import React from "react";
+import "./Card.css";
 
-function Card({card}) {
+function Card({ card }) {
   return (
     <>
       <li>
-        <img className='card' src={card.src} />
+        <img className="card" src={card.src} />
       </li>
     </>
   );
