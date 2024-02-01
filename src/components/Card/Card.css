@@ -1,11 +1,22 @@
 .card {
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
   width: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.skeleton {
+  background-color: hsl(200, 20%, 95%);
 }
 
 .card__saveButton {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 25px;
+  left: 25px;
   transform: translate(-50%, -50%);
   background-color: transparent;
   border: none;

@@ -12,7 +12,7 @@ function Card({ card, onClick }) {
       style={{ position: 'relative', display: 'inline-block' }}
     >
       <li>
-        <img className="card" src={card.src} alt={card.alt} onClick={() => onClick(card)} />
+        <img className="card skeleton" src={card.src} alt={card.alt} onClick={() => onClick(card)} />
         {isHovered && 
         <button className="card__saveButton">
           <CiBookmarkPlus />
