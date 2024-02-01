@@ -1,3 +1,26 @@
 .card {
   width: 100%;
 }
+
+.card__saveButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #4a4a4a;
+  background-color: white;
+  padding: 5px 5px 0 5px;
+  margin: 0;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.card__saveButton:hover {
+  transition: 0.25s ease-in-out;
+  background-color: #4a4a4a;
+  color: white;
+}
+
