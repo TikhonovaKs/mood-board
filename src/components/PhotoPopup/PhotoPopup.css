@@ -77,6 +77,13 @@
   padding-top: 15px;
 }
 
+@media screen and (min-width: 1280px) {
+  .popup__buttonsContainer {
+    justify-content: right;
+    gap: 0.7rem;
+  }
+}
+
 .popup__addButton {
   background: url("/public/images/add-btn.svg");
   width: 100px;

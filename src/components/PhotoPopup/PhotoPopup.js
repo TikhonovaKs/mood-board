@@ -5,7 +5,7 @@ function PhotoPopup({ selectedCard, onClose }) {
   return (
     <div className="popup popup_overley_dark">
       <div className="popup__container">
-        <h3 className="popup__title">{selectedCard.alt}</h3>
+        {/* <h3 className="popup__title">{selectedCard.alt}</h3> */}
         <img
           src={selectedCard.src}
           alt={selectedCard.alt}
