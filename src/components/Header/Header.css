@@ -30,7 +30,7 @@ header {
 
 .header__icon--account path,
 .header__icon--find path {
-  fill: #000000;
+  fill: #343434;
 }
 
 .header__icon--account path:hover,
@@ -38,9 +38,4 @@ header {
   fill: #000000;
   cursor: pointer;
   transition: ease 0.5s;
-}
-
-.header__right {
-  display: flex;
-  gap: 0.5rem;
 }
