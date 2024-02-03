@@ -1,9 +1,10 @@
 .boardPage {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 18px 14px;
-  }p {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 18px 14px;
+}
+p {
   margin: 0;
 }
 
@@ -26,17 +27,17 @@
 }
 
 .boardpage__title,
-input {
+.boardpage__input {
   border: none;
   background-color: #343434;
   color: white;
 }
 
-input::placeholder {
+.boardpage__input::placeholder {
   color: lightgray;
 }
 
-input:focus,
+.boardpage__input:focus,
 textarea:focus {
   outline: none;
 }
