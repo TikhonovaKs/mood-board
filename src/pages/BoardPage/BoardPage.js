@@ -1,11 +1,12 @@
 import "./BoardPage.css";
 import { ReactComponent as HeartIcon } from "../../Icons/heart-dark.svg";
 import React, { useState, useEffect, useRef } from 'react';
-// import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
+import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 import './BoardPage.css';
-// import CardList from '../../components/CardList/CardList.js';
+import CardList from '../../components/CardList/CardList.js';
 
 export default function BoardPage() {
+ const { boardList } = useBoard();
   const inputRef = useRef();
   const [likes, setLikes] = useState(0);
   const [boardTitle, setBoardTitle] = useState("");
@@ -45,6 +46,9 @@ export default function BoardPage() {
             </div>
           </div>
         </div>
+        <div className="boardPage">
+      <CardList cardsList={boardList} />
+    </div>
       </div>
     </section>
   );

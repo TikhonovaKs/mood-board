@@ -4,7 +4,7 @@ import BoardProviderContext from './BoardProvider.context';
 const BoardProvider = ({ children }) => {
   const [boardList, setBoardList] = useState([]);
 
-  // Loading data from localStorage when mounting a component
+  // Loading savedList from localStorage when mounting a component
   useEffect(() => {
     const savedList = JSON.parse(localStorage.getItem('savedList')) || [];
     setBoardList(savedList);
@@ -16,17 +16,23 @@ const BoardProvider = ({ children }) => {
   }, [boardList]);
 
   const saveCard = (data) => {
-    setBoardList((prevList) => [...prevList, data]);
+    const newCard = {
+      src: data.src,
+      alt: data.alt,
+      isSaved: true,
+    };
+    setBoardList((prevList) => [...prevList, newCard]);
   };
 
-  // const deleteCard = () => {
-
-  // }
+  const deleteCard = (data) => {
+  const updList = boardList.filter((card) => card.src !== data.src);
+  setBoardList(updList);
+  }
 
   const value = {
-    // initialize,
     boardList,
     saveCard,
+    deleteCard,
   };
 
   return <BoardProviderContext.Provider value={value}>{children}</BoardProviderContext.Provider>;

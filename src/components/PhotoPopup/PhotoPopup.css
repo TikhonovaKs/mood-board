@@ -85,7 +85,7 @@
 }
 
 .popup__addButton {
-  background: url("/public/images/add-btn.svg");
+  /* background: url("/public/images/add-btn.svg"); */
   width: 100px;
   height: 34px;
   border: none;
