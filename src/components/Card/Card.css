@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.card__saveButton {
+.card__button {
   position: absolute;
   top: 25px;
   left: 25px;
@@ -34,7 +34,7 @@
   border-radius: 5px;
 }
 
-.card__saveButton:hover {
+.card__button:hover {
   transition: 0.25s ease-in-out;
   background-color: #4a4a4a;
   color: white;

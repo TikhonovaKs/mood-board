@@ -3,7 +3,7 @@ import "./CardList.css";
 import Card from "../Card/Card";
 import PhotoPopup from "../PhotoPopup/PhotoPopup";
 
-function CardList({ searchList }) {
+function CardList({ cardsList }) {
   const [popupVisible, setPopupVisible] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
 
@@ -21,8 +21,8 @@ function CardList({ searchList }) {
   return (
     <>
       <ul className="cardList">
-        {searchList &&
-          searchList?.map((item, index) => (
+        {cardsList &&
+          cardsList?.map((item, index) => (
             <Card
               key={index}
               card={item}

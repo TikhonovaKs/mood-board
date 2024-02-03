@@ -23,7 +23,7 @@ function SearchPage() {
     <div className="searchPage">
       <Search handleSearch={handleSearch} />
       <Tips />
-      <CardList searchList={searchList} />
+      <CardList cardsList={searchList} />
       {/* <PhotoPopup /> */}
     </div>
   );
