@@ -1,6 +1,8 @@
 import { useContext } from 'react';
 import SearchProviderContext from './SearchProvider.context';
 
-export const useSearch = () => {
+const useSearch = () => {
   return useContext(SearchProviderContext);
 };
+
+export default useSearch;

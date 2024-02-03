@@ -1,3 +1,18 @@
+import React, { useState, useEffect } from 'react';
+import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
+import './BoardPage.css';
+import CardList from '../../components/CardList/CardList.js';
+
 export default function BoardPage() {
-  return <h1>Test BoardPage</h1>;
+
+ const { boardList } = useBoard();
+   
+ 
+
+  return (
+    <div className="boardPage">
+      <CardList searchList={boardList} />
+      {/* <PhotoPopup /> */}
+    </div>
+  );
 }

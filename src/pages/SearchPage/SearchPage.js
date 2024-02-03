@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import useFetch from '../../hooks/useFetch.js';
-import { useSearch } from '../../providers/SearchProvider/SearchProvider.hook.js';
+import useSearch from '../../providers/SearchProvider/SearchProvider.hook.js';
 import './SearchPage.css';
 import Search from '../../components/Search/Search.js';
 import Tips from '../../components/Tips/Tips.js';
