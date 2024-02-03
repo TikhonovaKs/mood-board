@@ -1,7 +1,9 @@
 import "./BoardPage.css";
 import { ReactComponent as HeartIcon } from "../../Icons/heart-dark.svg";
-import { useState } from "react";
-import { useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
+// import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
+import './BoardPage.css';
+// import CardList from '../../components/CardList/CardList.js';
 
 export default function BoardPage() {
   const inputRef = useRef();

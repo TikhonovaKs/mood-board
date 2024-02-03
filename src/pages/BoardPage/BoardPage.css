@@ -1,4 +1,9 @@
-p {
+.boardPage {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 18px 14px;
+  }p {
   margin: 0;
 }
 

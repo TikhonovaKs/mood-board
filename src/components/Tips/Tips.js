@@ -1,7 +1,7 @@
 import React from 'react';
 import './Tips.css';
 import TIPS from '../../utils/TIPS.js';
-import { useSearch } from '../../providers/SearchProvider/SearchProvider.hook.js';
+import useSearch from '../../providers/SearchProvider/SearchProvider.hook.js';
 
 function Tips() {
   const listOfTips = TIPS;

@@ -1,7 +1,7 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { useSearch } from "../../providers/SearchProvider/SearchProvider.hook.js";
-import "./Search.css";
+import React from 'react';
+import { useForm }  from 'react-hook-form';
+import useSearch from '../../providers/SearchProvider/SearchProvider.hook.js';
+import './Search.css';
 
 function Search({ handleSearch }) {
   const { saveKeyWord, keyWord } = useSearch();
