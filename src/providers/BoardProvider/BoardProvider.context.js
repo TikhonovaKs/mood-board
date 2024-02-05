@@ -4,4 +4,6 @@ export default createContext({
     initialize: () => Promise,
     saveCard: () => { },
     deleteCard: () => { },
+    handleLikes: () => { },
+    onChangeTitle: () => { },
 });
