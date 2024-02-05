@@ -1,28 +1,15 @@
 import "./BoardPage.css";
 import { ReactComponent as HeartIcon } from "../../Icons/heart-dark.svg";
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 import './BoardPage.css';
 import CardList from '../../components/CardList/CardList.js';
 
 export default function BoardPage() {
- const { boardList } = useBoard();
-  const inputRef = useRef();
-  const [likes, setLikes] = useState(0);
-  const [boardTitle, setBoardTitle] = useState("");
-
-  console.log("boardtitle: ", { boardTitle });
-
-  function onChangeTitle(e) {
-    setBoardTitle(e.target.value);
-  }
+ const { boardList, likes, handleLikes, boardTitle, onChangeTitle } = useBoard();
 
   function onSubmitForm(e) {
     e.preventDefault();
-  }
-
-  function handleLikes() {
-    setLikes(likes + 1);
   }
 
   return (
@@ -32,7 +19,7 @@ export default function BoardPage() {
           <input
             className="boardpage__input"
             type="text"
-            onChange={onChangeTitle}
+            onChange={(e) => onChangeTitle(e)}
             placeholder={boardTitle ? boardTitle : "Board title..."}
           />
         </form>
