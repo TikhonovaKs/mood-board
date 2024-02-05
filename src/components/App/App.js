@@ -15,10 +15,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Root />}>
               <Route index element={<SearchPage />} />
-              <Route path="/search" element={<SearchPage />} />
-              
-                <Route path="/myboard" element={<BoardPage />} />
-             
+              <Route path="/search" element={<SearchPage />} />             
+                <Route path="/myboard" element={<BoardPage />} />            
             </Route>
           </Routes>
           </BoardProvider>

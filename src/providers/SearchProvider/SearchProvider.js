@@ -14,20 +14,33 @@ const SearchProvider = ({ children }) => {
     localStorage.setItem('searchList', JSON.stringify(list));
   };
 
-  const getSearchCards = (keyword) => {
+  const getSearchCards = (keyword, currentBoardList) => {
     if (!keyword) {
       return;
     }
     photoApi.searchPhoto(keyword).then((data) => {
       const photos = data.photos;
       const updatedList = photos.map((item) => ({
+        id: item.id,
         src: item.src.original,
         alt: item.alt,
-        isSaved: false,
+        isSaved: currentBoardList && currentBoardList.some((boardItem) => boardItem.id === item.id) ? true : false,
       }));
       setSearchList(updatedList);
       saveSearchListToLocalStorage(updatedList);
     });
+  };
+  const setSavedCard = (targetCard) => {
+    const updSearchList = searchList.map((srchCard) => {
+      if (targetCard.id === srchCard.id) {
+        return {
+          ...srchCard,
+          isSaved: true,
+        };
+      }
+      return srchCard;
+    });
+    setSearchList(updSearchList);
   };
 
   const value = {
@@ -35,6 +48,7 @@ const SearchProvider = ({ children }) => {
     keyWord,
     getSearchCards,
     searchList,
+    setSavedCard,
   };
 
   return <SearchProviderContext.Provider value={value}>{children}</SearchProviderContext.Provider>;

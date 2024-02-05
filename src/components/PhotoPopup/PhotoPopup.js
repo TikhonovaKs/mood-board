@@ -9,8 +9,6 @@ import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 function PhotoPopup({ selectedCard, onClose, popupVisible }) {
   const { saveCard, deleteCard } = useBoard();
 
-  // const [isHovered, setIsHovered] = useState(false);
-
   const handleSave = (card) => {
     saveCard(card);
     onClose();
@@ -18,6 +16,7 @@ function PhotoPopup({ selectedCard, onClose, popupVisible }) {
 
   const handleDelete = (card) => {
     deleteCard(card);
+    onClose();
   }
   return (
     <div className="popup popup_overley_dark">  
