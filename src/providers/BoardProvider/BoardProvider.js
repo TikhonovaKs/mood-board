@@ -2,15 +2,9 @@ import { useState, useEffect } from 'react';
 import BoardProviderContext from './BoardProvider.context';
 
 const BoardProvider = ({ children }) => {
-  const [boardList, setBoardList] = useState([]);
+  const [boardList, setBoardList] = useState(JSON.parse(localStorage.getItem('savedList')) || []);
   const [likes, setLikes] = useState(0);
   const [boardTitle, setBoardTitle] = useState("");
-
-  // Loading savedList from localStorage when mounting a component
-  useEffect(() => {
-    const savedList = JSON.parse(localStorage.getItem('savedList')) || [];
-    setBoardList(savedList);
-  }, []);
 
   // Saving to localStorage when updating boardList
   useEffect(() => {
@@ -19,6 +13,7 @@ const BoardProvider = ({ children }) => {
 
   const saveCard = (data) => {
     const newCard = {
+      id: data.id,
       src: data.src,
       alt: data.alt,
       isSaved: true,
