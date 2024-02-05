@@ -8,16 +8,14 @@
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
-  /* visibility: hidden;
-  opacity: 0; */
   transition: visibility 0.5s, opacity 0.5s linear;
-}
+} */
 
 .popup_is-opened {
   visibility: visible;
   opacity: 1;
   transition: visibility 0s, opacity 0.5s linear;
-}
+} 
 
 .popup__container {
   position: relative;
@@ -84,7 +82,7 @@
   }
 }
 
-.popup__addButton {
+.popup__button {
   /* background: url("/public/images/add-btn.svg"); */
   width: 100px;
   height: 34px;
