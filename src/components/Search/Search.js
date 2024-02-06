@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useForm }  from 'react-hook-form';
 import useSearch from '../../providers/SearchProvider/SearchProvider.hook.js';
+import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 import './Search.css';
 
 function Search({ handleSearch }) {
-  const { saveKeyWord, keyWord } = useSearch();
+  const { setKeyWord } = useSearch();
 
   const {
     register,
@@ -15,8 +16,7 @@ function Search({ handleSearch }) {
   });
 
   const onSubmit = (data) => {
-    saveKeyWord(data.keyword);
-    handleSearch(keyWord);
+    setKeyWord(data.keyword);
   };
 
   return (
@@ -30,7 +30,7 @@ function Search({ handleSearch }) {
         type="text"
         placeholder="Press to search..."
         className="search__input"
-        defaultValue={keyWord}
+        // defaultValue={inputKeyword}
         {...register("keyword", {
           required: {
             value: true,

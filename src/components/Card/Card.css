@@ -70,11 +70,6 @@
   color: white;
 }
 
-.card__button-isSaved {
-  background-color: #4A4A4A;
-  color: white;
-}
-
 .card__wrapper {
   display: flex;
   flex-wrap: wrap;
