@@ -3,9 +3,6 @@
 # Study project "Mood board"
 
 
-# Study project "Mood board"
-
-
 ***This is a service where you can .***>
 
 ## Tools and stack: 
