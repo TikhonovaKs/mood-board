@@ -3,13 +3,15 @@ import BoardProviderContext from './BoardProvider.context';
 
 const BoardProvider = ({ children }) => {
   const [boardList, setBoardList] = useState(JSON.parse(localStorage.getItem('savedList')) || []);
-  const [likes, setLikes] = useState(0);
-  const [boardTitle, setBoardTitle] = useState("");
+  const [likes, setLikes] = useState(JSON.parse(localStorage.getItem('boardLikes')) || 0);
+  const [boardTitle, setBoardTitle] = useState(JSON.parse(localStorage.getItem('boardTitle')) || '');
 
   // Saving to localStorage when updating boardList
   useEffect(() => {
     localStorage.setItem('savedList', JSON.stringify(boardList));
-  }, [boardList]);
+    localStorage.setItem('boardLikes', JSON.stringify(likes));
+    localStorage.setItem('boardTitle', JSON.stringify(boardTitle));
+  }, [boardList, likes, boardTitle]);
 
   const saveCard = (data) => {
     const newCard = {

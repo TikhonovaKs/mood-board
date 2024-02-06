@@ -1,12 +1,10 @@
 import React from "react";
 import { CiBookmarkPlus, CiCircleMinus } from 'react-icons/ci';
 import "./PhotoPopup.css";
-// import SaveImageButton from '../../images/add-btn.svg';
-// import RemoveImageButton from '../../images/remove-btn.svg';
 import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 
 
-function PhotoPopup({ selectedCard, onClose, popupVisible }) {
+function PhotoPopup({ selectedCard, onClose }) {
   const { saveCard, deleteCard } = useBoard();
 
   const handleSave = (card) => {
@@ -21,14 +19,12 @@ function PhotoPopup({ selectedCard, onClose, popupVisible }) {
   return (
     <div className="popup popup_overley_dark">  
       <div className="popup__container">
-        {/* <h3 className="popup__title">{selectedCard.alt}</h3> */}
         <img
           src={selectedCard.src}
           alt={selectedCard.alt}
           className="popup__image"
         />
         <div className="popup__buttonsContainer">
-          {/* <button className="popup__addButton"></button> */}
           {selectedCard.isSaved === true ? (
           <button className="popup__button" onClick={() => handleDelete(selectedCard)}>
             <CiCircleMinus />

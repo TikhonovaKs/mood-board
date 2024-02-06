@@ -12,14 +12,14 @@ class PhotoApi {
   }
 
   searchPhoto(keyword) {
-    return fetch(`${this._url}search?query=${keyword}&per_page=40`, {
+    return fetch(`${this._url}search?query=${keyword}&per_page=80`, {
       method: "GET",
       headers: this._headers,
     }).then(this._checkResponse);
   }
 
   fetchStartPhotos() {
-    return fetch(`${this._url}curated&per_page=40`, {
+    return fetch(`${this._url}curated?per_page=13`, {
       method: "GET",
       headers: this._headers,
     }).then(this._checkResponse);

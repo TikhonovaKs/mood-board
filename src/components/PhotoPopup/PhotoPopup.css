@@ -83,11 +83,22 @@
 }
 
 .popup__button {
-  /* background: url("/public/images/add-btn.svg"); */
   width: 100px;
   height: 34px;
   border: none;
   cursor: pointer;
+  padding: 5px 5px 0 5px;
+  margin: 0;
+  font-size: 24px;
+  border-radius: 5px;
+  color: white;
+  background-color: #FF6838;
+}
+
+.popup__button:hover {
+  transition: 0.25s ease-in-out;
+  background-color: #4A4A4A;
+  color: white;
 }
 
 .popup__closeButton {
