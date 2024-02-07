@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import photoApi from '../../utils/PhotoApi.js';
+import React, { useEffect } from 'react';
 import useSearch from '../../providers/SearchProvider/SearchProvider.hook.js';
 import './SearchPage.css';
 import Search from '../../components/Search/Search.js';
-import Tips from '../../components/Tips/Tips.js';
 import CardList from '../../components/CardList/CardList.js';
 import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 
@@ -22,7 +20,6 @@ function SearchPage() {
   return (
     <div className="searchPage">
       <Search />
-      {/* <Tips /> */}
       <CardList cardsList={searchList} />
     </div>
   );

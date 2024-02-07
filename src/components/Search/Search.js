@@ -1,10 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useForm }  from 'react-hook-form';
 import useSearch from '../../providers/SearchProvider/SearchProvider.hook.js';
-import useBoard from '../../providers/BoardProvider/BoardProvider.hook.js';
 import './Search.css';
 
-function Search({ handleSearch }) {
+function Search() {
   const { setKeyWord } = useSearch();
 
   const {
@@ -30,7 +29,6 @@ function Search({ handleSearch }) {
         type="text"
         placeholder="Press to search..."
         className="search__input"
-        // defaultValue={inputKeyword}
         {...register("keyword", {
           required: {
             value: true,
