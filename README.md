@@ -17,9 +17,7 @@
 * HTML / CSS / React / API
 * State manager: useContext hook
 * Third-party libraries: [react-icons](https://react-icons.github.io/react-icons/) / [react-hook-form](https://www.npmjs.com/package/react-hook-form) / [react-router-dom](https://reactrouter.com/en/main)
-
-## Custom hook:
-* useResize for tracking a screen size;
+* Custom hook: "useResize" hook for tracking a screen size
 
 ## Here's what was done:
 * Sending GET requests to a public API to fetch random photos upon the initial page load, and filtered photos based on a keyword.
