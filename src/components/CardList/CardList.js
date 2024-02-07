@@ -32,7 +32,6 @@ function CardList({ cardsList }) {
   const isButtonHidden = visibleCardsFromList >= cardsList.length;
 
   const onCardClick = (item) => {
-    console.log('Selected Card:', item);
     setSelectedCard(item);
     setPopupVisible(true);
   };
@@ -54,7 +53,7 @@ function CardList({ cardsList }) {
         <ul className="cardList">{cards}</ul>
         <button
           className={`cardList__button-more ${isButtonHidden ? 'cardList__button-more-hidden' : ''}`}
-          aria-label="Еще больше фильмов"
+          aria-label=""
           type="button"
           onClick={showMoreCards}
         >

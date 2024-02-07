@@ -2,17 +2,33 @@
 
 # Study project "Mood board"
 
+***This is a service for creating your own mood board by searching for images using keywords, viewing, adding, and removing them.***>
 
-***This is a service where you can .***>
+## Project links
+### Website
+[Visit our website]()
+<br />
+
+### Github
+[Visit our website](https://github.com/TikhonovaKs/mood-board)
+<br />
 
 ## Tools and stack: 
-HTML / CSS / React / API / useContext (state manager)
+HTML / CSS / React / API
 <br />
 
-## Libraries: 
+## State manager: 
+useContext hook
+<br />
+
+## third-party libraries: 
 [react-icons](https://react-icons.github.io/react-icons/)   
 [react-hook-form](https://www.npmjs.com/package/react-hook-form)  
+[react-router-dom](https://reactrouter.com/en/main)
 <br />
+
+## Custom hook:
+* useResize for tracking a screen size;
 
 ## Here's what was done:
 * Sending GET requests to a public API to fetch random photos upon the initial page load, and filtered photos based on a keyword.
@@ -22,11 +38,6 @@ HTML / CSS / React / API / useContext (state manager)
 * Implementing a custom hook to display a specific number of photos depending on the screen size and load the next set of photos by clicking the "more" button.
 * Using the useContext state manager for searching and storing photos.
 
-
-## Project links
-### Website
-[Visit our website]()
-<br />
 
 ## Project Setup Instructions
 To set up this project locally, follow the steps below:
