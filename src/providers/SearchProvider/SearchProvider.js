@@ -42,7 +42,7 @@ const SearchProvider = ({ children }) => {
       }));
       setSearchList(updatedList);
       saveSearchListToLocalStorage(updatedList);
-    });
+    })
   };
 
   const setSavedCard = (targetCard) => {
@@ -67,7 +67,9 @@ const SearchProvider = ({ children }) => {
     setKeyWord,
   };
 
-  return <SearchProviderContext.Provider value={value}>{children}</SearchProviderContext.Provider>;
+  return <SearchProviderContext.Provider value={value}>
+      {children}
+    </SearchProviderContext.Provider>;
 };
 
 export default SearchProvider;

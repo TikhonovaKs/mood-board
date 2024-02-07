@@ -6,7 +6,6 @@ const BoardProvider = ({ children }) => {
   const [likes, setLikes] = useState(JSON.parse(localStorage.getItem('boardLikes')) || 0);
   const [boardTitle, setBoardTitle] = useState(JSON.parse(localStorage.getItem('boardTitle')) || '');
 
-  // Saving to localStorage when updating boardList
   useEffect(() => {
     localStorage.setItem('savedList', JSON.stringify(boardList));
     localStorage.setItem('boardLikes', JSON.stringify(likes));
