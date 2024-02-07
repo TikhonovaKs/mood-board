@@ -16,10 +16,7 @@
 ## Tools and stack: 
 * HTML / CSS / React / API
 * State manager: useContext hook
-* Third-party libraries: 
-[react-icons](https://react-icons.github.io/react-icons/)   
-[react-hook-form](https://www.npmjs.com/package/react-hook-form)  
-[react-router-dom](https://reactrouter.com/en/main)
+* Third-party libraries: [react-icons](https://react-icons.github.io/react-icons/) / [react-hook-form](https://www.npmjs.com/package/react-hook-form) / [react-router-dom](https://reactrouter.com/en/main)
 <br />
 
 ## Custom hook:
