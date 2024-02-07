@@ -14,7 +14,7 @@ function CardList({ cardsList }) {
     isScreenMd: 8,
     isScreenSm: 5,
   };
-  const [visibleCardsFromList, setVisibleCardsFromList] = React.useState(
+  const [visibleCardsFromList, setVisibleCardsFromList] = useState(
     visibleCardsMap[isScreenXl ? 'isScreenXl' : isScreenMd ? 'isScreenMd' : 'isScreenSm']
   );
   const showMoreCards = () => {
