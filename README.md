@@ -5,13 +5,8 @@
 ***This is a service for creating your own mood board by searching for images using keywords, viewing, adding, and removing them.***>
 
 ## Project links
-### Website
-[Visit our website]()
-<br />
-
-### Github
-[Visit our website](https://github.com/TikhonovaKs/mood-board)
-<br />
+* Website [Visit our website]()
+* Github [Visit our website](https://github.com/TikhonovaKs/mood-board)
 
 ## Tools and stack: 
 * HTML / CSS / React / API
