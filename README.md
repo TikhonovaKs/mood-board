@@ -5,7 +5,7 @@
 ***This is a service for creating your own mood board by searching for images using keywords, viewing, adding, and removing them.***>
 
 ## Project links
-* Website [Visit website]()
+* Website [Visit website](https://mood-page-hi.netlify.app/)
 * Github [Visit repository](https://github.com/TikhonovaKs/mood-board)
 
 ## Tools and stack: 
