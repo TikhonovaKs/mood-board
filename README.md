@@ -2,7 +2,7 @@
 
 # Study project "Mood board"
 
-***This is a service for creating your own mood board by searching for images using keywords, viewing, adding, and removing them.***>
+***This is a service for creating your own mood board by searching for images using keywords, viewing, adding, and removing them.***
 
 ## Project links
 * Website [Visit website](https://mood-page-hi.netlify.app/)
